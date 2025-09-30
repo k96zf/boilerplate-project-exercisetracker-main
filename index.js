@@ -30,7 +30,7 @@ app.get("/api/users",(req,res)=>{
   res.json(users);
 })
 
-app.post("/api/users/:id/exercises",(req,res)=>{
+app.post("/api/users/:_id/exercises",(req,res)=>{
   const user = users.find(u => u._id === req.params._id);
   if(!user) return res.json({error:"User Not Found"});
 
